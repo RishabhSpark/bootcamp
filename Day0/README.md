@@ -4,16 +4,17 @@
 
 It greets a person by name if provided, or defaults to "World".
 
+<<<<<<< HEAD:Day0/README.md
 Asciinema Link: https://asciinema.org/a/SQRsxnGGOPktKAqJD0SFsCkUz
 
 --
+=======
+>>>>>>> refs/remotes/origin/main:Day 0/README.md
 ## Features
 
 - Clean and modern CLI powered by **Typer**
 - Stylish terminal output with **Rich**
 - Default greeting: `Hello, World!`
-
---
 
 ## Installation
 
@@ -22,8 +23,6 @@ To install the package from [TestPyPI](https://test.pypi.org/):
 ```bash
 pip install -i https://test.pypi.org/simple/ rishabh-hello
 ```
-
---
 
 ## Usage
 After installing, simply run the following command in your terminal:
