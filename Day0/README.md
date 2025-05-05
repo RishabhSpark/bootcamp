@@ -4,6 +4,8 @@
 
 It greets a person by name if provided, or defaults to "World".
 
+Asciinema Link: https://asciinema.org/a/SQRsxnGGOPktKAqJD0SFsCkUz
+
 --
 ## Features
 
