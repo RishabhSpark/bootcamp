@@ -1,0 +1,19 @@
+site_name: Doctools
+theme:
+  name: material
+
+nav:
+  - Markdown Cheatsheet: markdown_cheatsheet.md
+  - Recent Project Docs: README_authoring.md
+  - Daily Log: daily_log.md
+  - Mermaid Sequence Diagram: sequence_diagram_mermaidjs.md
+  - Draw.io Block Diagram: block_diagram_drawio.md
+  - XMind Mind Map: mind_map_xmind.md
+  - System Interaction Flow: system_interaction_flow.md
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
