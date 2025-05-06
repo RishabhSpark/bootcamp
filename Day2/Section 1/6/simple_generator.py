@@ -3,6 +3,5 @@ def countdown(n):
         yield n
         n -= 1
 
-# Usage
 for num in countdown(5):
     print(num)

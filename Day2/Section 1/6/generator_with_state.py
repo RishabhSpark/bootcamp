@@ -6,6 +6,5 @@ def running_total(numbers: list[int]) -> Iterator[int]:
         total += num
         yield total
 
-# Usage
 for total in running_total([1, 2, 3, 4]):
     print(total)

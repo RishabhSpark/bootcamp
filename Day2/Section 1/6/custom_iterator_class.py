@@ -13,7 +13,6 @@ class Counter:
         self.current += 1
         return current_value
 
-# Usage
 counter = Counter(5)
 for number in counter:
     print(number)

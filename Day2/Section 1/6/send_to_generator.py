@@ -3,7 +3,6 @@ def echo():
     while True:
         received = yield f"Received: {received}"
 
-# Usage
 gen = echo()
 print(next(gen))
 print(gen.send("Hello"))
