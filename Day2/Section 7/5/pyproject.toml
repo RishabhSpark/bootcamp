@@ -1,0 +1,14 @@
+[project]
+name = "mypkg"
+version = "0.1.0"
+description = "A sample Python package"
+authors = [
+    { name = "RishabhSpark", email = "rishabh1000khandelwal@gmail.com" }
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+mytool = "mypkg.cli:main"
