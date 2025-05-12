@@ -1,0 +1,5 @@
+Hello world,
+Hope you're doing well!!!
+error: Woah an error!
+warn: Just a warning
+error: Another issue

@@ -1,0 +1,5 @@
+pipeline:
+  - type: processors.length_filter.LengthFilter
+    config:
+      min_length: 5
+  - type: processors.snake.to_snakecase

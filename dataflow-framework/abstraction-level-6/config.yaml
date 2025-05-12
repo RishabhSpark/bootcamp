@@ -1,0 +1,9 @@
+nodes:
+  - tag: start
+    type: processors.start.StartProcessor
+  - tag: filters
+    type: processors.filters.LineProcessor
+  - tag: formatters
+    type: processors.formatters.SnakecaseFormatter
+  - tag: output
+    type: processors.output.OutputHandler

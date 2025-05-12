@@ -1,0 +1,37 @@
+nodes:
+  - name: trim_node
+    type: trim
+
+  - name: error_tagger
+    type: tag_error
+
+  - name: warn_tagger
+    type: tag_warn
+
+  - name: line_counter
+    type: count
+
+edges:
+  # After trimming, send data to both taggers
+  - from: trim_node
+    to: error_tagger
+    tag: general
+
+  - from: trim_node
+    to: warn_tagger
+    tag: general
+
+  # Allow error_tagger to forward specific tag types
+  - from: error_tagger
+    to: line_counter
+    tag: error
+
+  # Allow warn_tagger to forward different tag types
+  - from: warn_tagger
+    to: line_counter
+    tag: warn
+
+  # Let trimmed data go directly to line counter too
+  - from: trim_node
+    to: line_counter
+    tag: next
