@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "player_name": "TestPlayer",
+    "score": 100,
+    "level": 5,
+    "items": [
+        "Sword",
+        "Strength Potion"
+    ]
+}
