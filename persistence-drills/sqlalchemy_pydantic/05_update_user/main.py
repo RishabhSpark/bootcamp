@@ -1,8 +1,11 @@
 from sqlalchemy.orm import Session
 from pydantic import ValidationError
-from models import User, UserSchema, SessionLocal
+from models import User, UserSchema, SessionLocal, EmailUpdateSchema
+from typing import Optional
+from sqlalchemy.orm import Session
+from sqlalchemy.exc import SQLAlchemyError
 
-# Create a SQLAlchemy session
+
 def get_db():
     db = SessionLocal()
     try:
@@ -10,18 +13,15 @@ def get_db():
     finally:
         db.close()
 
-# Insert a new user after validating data with Pydantic
 def insert_user(user_data: dict, db: Session):
     try:
         user_schema = UserSchema(**user_data)
         
-        # Create a new SQLAlchemy User instance
         new_user = User(name=user_schema.name, email=user_schema.email)
         
-        # Add the new user to the session and commit
         db.add(new_user)
         db.commit()
-        db.refresh(new_user)  # Refresh to get the updated data from the database
+        db.refresh(new_user)
         
         print(f"Inserted new user: {new_user.name} with email: {new_user.email}")
     except ValidationError as e:
@@ -50,15 +50,39 @@ def display_users(users):
     else:
         print("No users found.")
 
+def get_user_by_email(email: str, db: Session) -> Optional[UserSchema]:
+    try:
+        user = db.query(User).filter(User.email == email).first()
+        if user:
+            return UserSchema.model_validate(user)
+        else:
+            return None
+    except Exception as e:
+        print(f"Error fetching user by email: {e}")
+        return None
+
+def update_user_email(user_id: int, new_email: str):
+    session = SessionLocal()
+    try:
+        user = session.query(User).filter(User.id == user_id).first()
+        if user is None:
+            print(f"No user found with id {user_id}")
+            return
+
+        validated_email = EmailUpdateSchema(email=new_email).email
+
+        user.email = validated_email
+        session.commit()
+        print(f"User email updated successfully to {user.email}")
+
+    except ValidationError as ve:
+        print("Invalid email format:", ve)
+        session.rollback()
+    except SQLAlchemyError as e:
+        print("Database error:", e)
+        session.rollback()
+    finally:
+        session.close()
+
 if __name__ == "__main__":
-    user_data = {
-        "name": "Alice Johnson",
-        "email": "alice.johnson@example.com"
-    }
-
-    # Create a new session and insert the user
-    with SessionLocal() as db:
-        insert_user(user_data, db)
-
-        users = fetch_users(db)
-        display_users(users)
+    update_user_email(1, "updated.email@example.com")

@@ -1,4 +1,3 @@
-# main.py
 from sqlalchemy.orm import Session
 from pydantic import ValidationError
 from models import User, UserSchema, SessionLocal

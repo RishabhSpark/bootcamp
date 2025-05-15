@@ -1,8 +1,9 @@
 from sqlalchemy.orm import Session
 from pydantic import ValidationError
 from models import User, UserSchema, SessionLocal
+from typing import Optional
+from sqlalchemy.orm import Session
 
-# Create a SQLAlchemy session
 def get_db():
     db = SessionLocal()
     try:
@@ -10,18 +11,15 @@ def get_db():
     finally:
         db.close()
 
-# Insert a new user after validating data with Pydantic
 def insert_user(user_data: dict, db: Session):
     try:
         user_schema = UserSchema(**user_data)
         
-        # Create a new SQLAlchemy User instance
         new_user = User(name=user_schema.name, email=user_schema.email)
         
-        # Add the new user to the session and commit
         db.add(new_user)
         db.commit()
-        db.refresh(new_user)  # Refresh to get the updated data from the database
+        db.refresh(new_user)
         
         print(f"Inserted new user: {new_user.name} with email: {new_user.email}")
     except ValidationError as e:
@@ -50,15 +48,26 @@ def display_users(users):
     else:
         print("No users found.")
 
-if __name__ == "__main__":
-    user_data = {
-        "name": "Alice Johnson",
-        "email": "alice.johnson@example.com"
-    }
+def get_user_by_email(email: str, db: Session) -> Optional[UserSchema]:
+    try:
+        user = db.query(User).filter(User.email == email).first()
+        if user:
+            return UserSchema.model_validate(user)
+        else:
+            return None
+    except Exception as e:
+        print(f"Error fetching user by email: {e}")
+        return None
 
+if __name__ == "__main__":
     # Create a new session and insert the user
     with SessionLocal() as db:
-        insert_user(user_data, db)
+        email_to_search = "alice.johnson@example.com"
 
-        users = fetch_users(db)
-        display_users(users)
+        with SessionLocal() as db:
+            user_schema = get_user_by_email(email_to_search, db)
+
+            if user_schema:
+                print(f"User found: Name = {user_schema.name}, Email = {user_schema.email}")
+            else:
+                print(f"No user found with email: {email_to_search}")
