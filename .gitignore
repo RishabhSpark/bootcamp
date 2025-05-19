@@ -6,3 +6,6 @@ build/
 .venv/
 .uv-venv/
 .pypirc
+.vscode/
+
+figure-captions-extraction/.env
