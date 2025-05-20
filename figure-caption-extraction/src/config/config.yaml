@@ -1,7 +1,7 @@
 storage_backend: duckdb
 db_path: ./data/papers.duckdb
 
-api_key: ${API_KEY}
+api_key: mysecretapikey123
 
 data_source: pmc
 
