@@ -7,5 +7,6 @@ build/
 .uv-venv/
 .pypirc
 .vscode/
+.env
 
 figure-captions-extraction/.env

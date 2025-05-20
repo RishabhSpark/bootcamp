@@ -47,6 +47,9 @@ def run_batch_ingest(file_path: str):
         logger.info(f"Batch ingestion completed successfully for file: {file_path}")
         raise typer.Exit(code=0)
 
+    except typer.Exit:
+        raise
+
     except Exception as e:
         logger.error(f"Batch ingestion failed: {e}")
         raise typer.Exit(code=1)

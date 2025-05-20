@@ -1,12 +1,10 @@
-from typing import List, Dict
+from dataclasses import field
+from typing import List, Optional, Dict
 from pydantic import BaseModel
-
-# class EntityData(BaseModel):
-#     type: Optional[str]
-#     text: Optional[str]
-#     id: Optional[str]
 
 class FigureData(BaseModel):
     figure_name: str
-    figure_caption: str
-    entities: List[Dict[str, str]]
+    figure_caption: str 
+    # entities: List[Dict[str, str]]
+    # entities: List[Entity]
+    entities: Optional[List[Dict[str, str]]] = field(default_factory=list)

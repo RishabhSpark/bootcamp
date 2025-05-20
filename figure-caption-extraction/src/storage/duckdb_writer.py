@@ -1,5 +1,6 @@
 import duckdb
 import os
+import json
 from src.models.PaperData import PaperData
 from src.utils.logger import get_logger
 from src.config.config_loader import load_config
@@ -70,7 +71,7 @@ class DuckDBWriter:
             if not fig_exists:
                 self.conn.execute(
                     "INSERT INTO figures (pmcid, figure_name, figure_caption, entities) VALUES (?, ?, ?, ?)",
-                    (paper.pmcid, fig.figure_name, fig.figure_caption, ", ".join(fig.entities))
+                    (paper.pmcid, fig.figure_name, fig.figure_caption, json.dumps(fig.entities))
                 )
         logger.info(f"Inserted paper {paper.pmcid} with {len(paper.figures)} figures.")
         
@@ -92,7 +93,9 @@ class DuckDBWriter:
 
         papers_df = self.conn.execute("SELECT * FROM papers").fetchdf()
         figures_df = self.conn.execute("SELECT * FROM figures").fetchdf()
-
+        figures_df['entities'] = figures_df['entities'].apply(lambda x: json.loads(x) if isinstance(x, str) else x)
+        
         papers_df.to_json(os.path.join(output_dir, "papers.json"), orient="records", indent=2)
         figures_df.to_json(os.path.join(output_dir, "figures.json"), orient="records", indent=2)
+        
         logger.info("JSON export completed.")
