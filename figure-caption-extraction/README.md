@@ -13,7 +13,7 @@ The system is designed to extract, process, store, and serve metadata from scien
 
 ### 2. Processing Layer
 - Extracts metadata fields (title, abstract) and figure captions
-- Identifies key entities for each figure (not yet implemented)
+- Identifies key entities for each figure
 
 ### 3. Storage Layer
 - Writes metadata to DuckDB
@@ -100,6 +100,21 @@ graph TD
     parseData --> processed
     parseData --> failed
 ```
+
+## Ingestion Pipeline Diagram
+```mermaid
+flowchart TD
+    A["Start: Accept list of IDs"] --> B["Call BioC API"]
+    B --> C["Parse BioC structure"]
+    C --> D["Extract figure captions"]
+    D --> E["Call PubTator API"]
+    E --> F["Extract entities from captions"]
+    F --> G["Store in DuckDB Normalized Schema"]
+    G --> H["Log Summary and Debug Logs"]
+    H --> I{"Success?"}
+    I -- Yes --> J["Exit with Code 0"]
+    I -- No --> K["Exit with Code 1"]
+  ```
 
 ## Running with Docker & Makefile
 
@@ -227,8 +242,9 @@ You can access the cli by main.py
     │   └── config_loader.py
     ├── ingestion                   # PubMed logic
     │   ├── bioc_fetcher.py         # Fetches papers and extracts title, abstract, figures
-    │   ├── entity_fetcher.py       # Entity fetcher
     │   └── ingest_pipeline.py      # Pipeline
+    │   └── pmcid_to_pmid.py        # Converts pmcid to pmid
+    │   └── pubtator_fetcher.py     # Fetches entities using Pubtator3
     ├── models                      # Pydantic models
     │   ├── AppConfig.py            # Config
     │   ├── FigureData.py           # Figure data
@@ -251,7 +267,7 @@ Now, we can use this `docker run --rm -it paper-metadata:latest python main.py` 
 CLI has 4 commands:
 - ingest
   -  has `file` and `list` command. 
-  -  `file`: Takes `file_path`. Example, `python main.py ingest file ingest/file/pmc_ids.txt`
+  -  `file`: Takes `file_path`. Can be a csv, txt, or json file. Example, `python main.py ingest file ingest/file/pmc_ids.txt`
   -  `list`: Takes a list of pmcids
 - export
   - takes `csv` and `json` command

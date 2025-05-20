@@ -17,10 +17,6 @@ def fetch_entities_pubtator(pmcid: str) -> List[Entity]:
     Fetch entities from PubTator for a PMC ID.
     """
     base_url = "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/publications/export/pubtator"
-    api_key = os.getenv("NCBI_API_KEY")
-    if not api_key:
-        raise EnvironmentError("NCBI_API_KEY environment variable not set.")
-
 
     pmid = pmcid_to_pmid(pmcid)
 

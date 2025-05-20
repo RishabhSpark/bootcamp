@@ -1,9 +1,8 @@
 import requests
-from typing import Optional, Dict, Any, List
+from typing import Optional, List
 from xml.etree import ElementTree as ET
 from src.models.FigureData import FigureData
 from src.models.PaperData import PaperData
-from src.ingestion.entity_fetcher import extract_entities_pubtator3
 from src.utils.logger import get_logger
 from src.config.config_loader import load_config
 from src.ingestion.pmcid_to_pmid import pmcid_to_pmid
@@ -44,38 +43,6 @@ def extract_abstract(root: ET.Element) -> str:
                 return text_elem.text.strip()
     logger.warning("Abstract not found in BioC XML")
     return ""
-
-# def extract_figures(root: ET.Element) -> List[FigureData]:
-#     """Extract figure captions from the BioC XML root."""
-#     figures: List[Dict[str, Any]] = []
-    
-#     for passage in root.iter("passage"):
-#         section_type: Optional[str] = None
-#         passage_type: Optional[str] = None
-#         figure_name: Optional[str] = None
-        
-#         for infon in passage.findall("infon"):
-#             key = infon.attrib.get("key")
-#             if key == "section_type":
-#                 section_type = infon.text
-#             elif key == "type":
-#                 passage_type = infon.text
-#             elif key == "file":
-#                 figure_name = infon.text
-
-#         if (section_type == "FIG") and (passage_type == "fig_caption"):
-#             caption = passage.findtext("text")
-#             if caption and figure_name:
-#                 logger.info(f"Figure found: {figure_name.strip()}")
-#                 entities = extract_entities_pubtator3(caption.strip())
-#                 figures.append(FigureData(
-#                     figure_name=figure_name.strip(),
-#                     figure_caption=caption.strip(),
-#                     entities=[]
-#                 ))
-                
-#     logger.info(f"Total figures found: {len(figures)}")
-#     return figures
 
 def extract_figures(root: ET.Element) -> List[FigureData]:
     """Extract figure captions and their entities from BioC XML root."""
@@ -128,59 +95,6 @@ def extract_figures(root: ET.Element) -> List[FigureData]:
 
     logger.info(f"Total figures found: {len(figures)}")
     return figures
-
-# def fetch_paper(pmc_id: str) -> PaperData:
-#     """
-#     Fetch paper info and figure captions from BioC-PMC API.
-#     Returns PaperData with title, abstract, and list of figures.
-#     """
-#     url = f"https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/{pmc_id}/unicode"
-#     try:
-#         logger.info(f"Requesting BioC data for PMC {pmc_id}")
-#         response = requests.get(url, timeout=10, headers={"Accept": "application/xml"})
-        
-#         if response.status_code != 200:
-#             logger.warning(f"BioC API returned status {response.status_code} for {pmc_id}")
-#             raise ValueError(f"BioC API error {response.status_code} for {pmc_id}")
-        
-#         content = response.text.strip()
-#         if not content or not content.startswith('<?xml'):
-#             logger.warning(f"Received invalid or non-XML content for {pmc_id}")
-#             if content.startswith('<!DOCTYPE html') or '<html' in content.lower():
-#                 logger.debug(f"Received HTML instead of XML: {content[:200]}")
-#             else:
-#                 logger.debug(f"Response content (snippet): {content[:200]}")
-#             raise ValueError(f"Invalid XML response for {pmc_id}")
-        
-#         content_figures = response.text.strip()
-#         if not content_figures or not content_figures.startswith('<?xml'):
-#             logger.warning(f"Received invalid or non-XML content for {pmc_id}")
-#             if content_figures.startswith('<!DOCTYPE html') or '<html' in content_figures.lower():
-#                 logger.debug(f"Received HTML instead of XML: {content_figures[:200]}")
-#             else:
-#                 logger.debug(f"Response content (snippet): {content_figures[:200]}")
-#             raise ValueError(f"Invalid XML response for {pmc_id}")
-
-#         try:
-#             root = ET.fromstring(content)
-
-#             title = extract_title(root)
-#             abstract = extract_abstract(root)
-            
-#             figures_root = ET.fromstring(content_figures)
-#             figures = extract_figures(figures_root)
-
-#             logger.info(f'Paper data extracted successfully for PMC {pmc_id}')
-#             return PaperData(pmcid = pmc_id, title=title, abstract=abstract, figures=figures)
-        
-#         except ET.ParseError as e:
-#             logger.error(f"Error parsing XML for {pmc_id}: {e}")
-#             raise ValueError(f"XML parsing error for {pmc_id}: {e}") 
-
-#     except Exception as e:
-#         logger.error(f"Error fetching BioC paper {pmc_id}: {e}", exc_info=True)
-#         raise
-
 
 def fetch_paper(pmc_id: str) -> PaperData:
     """

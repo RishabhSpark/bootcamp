@@ -7,3 +7,4 @@ build/
 .uv-venv/
 .pypirc
 .vscode/
+.env

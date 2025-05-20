@@ -40,3 +40,18 @@ def from_list(ids: List[str]):
     except Exception as e:
         logger.error(f"Ingestion failed: {e}")
         raise typer.Exit(code=1)
+    
+@ingest_app.command("folder")
+def from_folder(folder_path: Path):
+    """
+    Ingest paper IDs from all supported files in a folder.
+    Supports: .txt, .csv, .json
+    """
+    logger.info(f"Reading IDs from folder: {folder_path}")
+    if not folder_path.exists() or not folder_path.is_dir():
+        logger.error(f"Folder not found or not a directory: {folder_path}")
+        raise typer.Exit(code=1)
+    
+    from src.cli.batch_ingest import run_batch_ingest_folder
+    
+    run_batch_ingest_folder(str(folder_path))

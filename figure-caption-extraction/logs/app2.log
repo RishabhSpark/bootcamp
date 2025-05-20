@@ -1,0 +1,306 @@
+[2025-05-20 13:28:25,749] INFO in ingest: Reading IDs from folder: ingest/folder
+[2025-05-20 13:28:25,750] INFO in batch_ingest: Loaded 2 IDs from ingest/folder/ids.txt
+[2025-05-20 13:28:25,750] INFO in batch_ingest: Loaded 3 IDs from ingest/folder/ids.csv
+[2025-05-20 13:28:25,750] INFO in batch_ingest: Loaded 4 IDs from ingest/folder/ids.json
+[2025-05-20 13:28:25,750] INFO in batch_ingest: Total PMC IDs collected: 9
+[2025-05-20 13:28:25,750] INFO in ingest_pipeline: Processing PMC ID: PMC10190110
+[2025-05-20 13:28:25,750] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC10190110
+[2025-05-20 13:28:27,540] INFO in bioc_fetcher: Title found: Advances in human intracranial electroencephalography research, guidelines and good practices
+[2025-05-20 13:28:27,540] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:27,540] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC10190110&format=json
+[2025-05-20 13:28:28,352] INFO in pmcid_to_pmid: Found PMID 35792291 for PMCID PMC10190110
+[2025-05-20 13:28:28,353] INFO in bioc_fetcher: Requesting PubTator data for PMID 35792291
+[2025-05-20 13:28:29,199] INFO in bioc_fetcher: Total figures found: 0
+[2025-05-20 13:28:29,202] INFO in ingest_pipeline: Successfully processed PMC ID: PMC10190110
+[2025-05-20 13:28:29,202] INFO in ingest_pipeline: Processing PMC ID: PMC8508466
+[2025-05-20 13:28:29,202] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC8508466
+[2025-05-20 13:28:30,372] INFO in bioc_fetcher: Title found: BOLD Coupling between Lesioned and Healthy Brain Is Associated with Glioma Patientsâ Recovery
+[2025-05-20 13:28:30,372] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:30,372] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC8508466&format=json
+[2025-05-20 13:28:31,173] INFO in pmcid_to_pmid: Found PMID 34638493 for PMCID PMC8508466
+[2025-05-20 13:28:31,173] INFO in bioc_fetcher: Requesting PubTator data for PMID 34638493
+[2025-05-20 13:28:32,499] INFO in bioc_fetcher: Figure found: cancers-13-05008-g001.jpg with 2 entities.
+[2025-05-20 13:28:32,499] INFO in bioc_fetcher: Figure found: cancers-13-05008-g002.jpg with 8 entities.
+[2025-05-20 13:28:32,499] INFO in bioc_fetcher: Figure found: cancers-13-05008-g003.jpg with 12 entities.
+[2025-05-20 13:28:32,499] INFO in bioc_fetcher: Figure found: cancers-13-05008-g004.jpg with 12 entities.
+[2025-05-20 13:28:32,499] INFO in bioc_fetcher: Figure found: cancers-13-05008-g005.jpg with 12 entities.
+[2025-05-20 13:28:32,500] INFO in bioc_fetcher: Figure found: cancers-13-05008-g006.jpg with 6 entities.
+[2025-05-20 13:28:32,500] INFO in bioc_fetcher: Total figures found: 6
+[2025-05-20 13:28:32,501] INFO in ingest_pipeline: Successfully processed PMC ID: PMC8508466
+[2025-05-20 13:28:32,501] INFO in ingest_pipeline: Processing PMC ID: PMC10025446
+[2025-05-20 13:28:32,501] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC10025446
+[2025-05-20 13:28:33,713] INFO in bioc_fetcher: Title found: A review on longitudinal data analysis with random forest
+[2025-05-20 13:28:33,714] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:33,714] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC10025446&format=json
+[2025-05-20 13:28:34,559] INFO in pmcid_to_pmid: Found PMID 36653905 for PMCID PMC10025446
+[2025-05-20 13:28:34,559] INFO in bioc_fetcher: Requesting PubTator data for PMID 36653905
+[2025-05-20 13:28:35,637] INFO in bioc_fetcher: Figure found: bbad002f1.jpg with 0 entities.
+[2025-05-20 13:28:35,637] INFO in bioc_fetcher: Figure found: bbad002f2.jpg with 0 entities.
+[2025-05-20 13:28:35,637] INFO in bioc_fetcher: Figure found: bbad002f3.jpg with 0 entities.
+[2025-05-20 13:28:35,638] INFO in bioc_fetcher: Total figures found: 3
+[2025-05-20 13:28:35,639] INFO in ingest_pipeline: Successfully processed PMC ID: PMC10025446
+[2025-05-20 13:28:35,639] INFO in ingest_pipeline: Processing PMC ID: PMC10543332
+[2025-05-20 13:28:35,639] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC10543332
+[2025-05-20 13:28:36,838] INFO in bioc_fetcher: Title found: Development and testing of a random forest-based machine learning model for predicting events among breast cancer patients with a poor response to neoadjuvant chemotherapy
+[2025-05-20 13:28:36,838] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:36,838] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC10543332&format=json
+[2025-05-20 13:28:37,653] INFO in pmcid_to_pmid: Found PMID 37777809 for PMCID PMC10543332
+[2025-05-20 13:28:37,653] INFO in bioc_fetcher: Requesting PubTator data for PMID 37777809
+[2025-05-20 13:28:38,750] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig1_HTML.jpg with 0 entities.
+[2025-05-20 13:28:38,751] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig2_HTML.jpg with 0 entities.
+[2025-05-20 13:28:38,751] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig3_HTML.jpg with 0 entities.
+[2025-05-20 13:28:38,751] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig4_HTML.jpg with 0 entities.
+[2025-05-20 13:28:38,751] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig5_HTML.jpg with 0 entities.
+[2025-05-20 13:28:38,751] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig6_HTML.jpg with 0 entities.
+[2025-05-20 13:28:38,751] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig7_HTML.jpg with 0 entities.
+[2025-05-20 13:28:38,751] INFO in bioc_fetcher: Total figures found: 7
+[2025-05-20 13:28:38,752] INFO in ingest_pipeline: Successfully processed PMC ID: PMC10543332
+[2025-05-20 13:28:38,752] INFO in ingest_pipeline: Processing PMC ID: PMC10280951
+[2025-05-20 13:28:38,752] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC10280951
+[2025-05-20 13:28:39,928] INFO in bioc_fetcher: Title found: Use and misuse of random forest variable importance metrics in medicine: demonstrations through incident stroke prediction
+[2025-05-20 13:28:39,928] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:39,928] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC10280951&format=json
+[2025-05-20 13:28:40,729] INFO in pmcid_to_pmid: Found PMID 37337173 for PMCID PMC10280951
+[2025-05-20 13:28:40,729] INFO in bioc_fetcher: Requesting PubTator data for PMID 37337173
+[2025-05-20 13:28:41,797] INFO in bioc_fetcher: Figure found: 12874_2023_1965_Fig1_HTML.jpg with 2 entities.
+[2025-05-20 13:28:41,798] INFO in bioc_fetcher: Figure found: 12874_2023_1965_Fig2_HTML.jpg with 1 entities.
+[2025-05-20 13:28:41,798] INFO in bioc_fetcher: Figure found: 12874_2023_1965_Fig3_HTML.jpg with 1 entities.
+[2025-05-20 13:28:41,798] INFO in bioc_fetcher: Total figures found: 3
+[2025-05-20 13:28:41,799] INFO in ingest_pipeline: Successfully processed PMC ID: PMC10280951
+[2025-05-20 13:28:41,799] INFO in ingest_pipeline: Processing PMC ID: PMC9924911
+[2025-05-20 13:28:41,799] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC9924911
+[2025-05-20 13:28:42,976] INFO in bioc_fetcher: Title found: Functional reconstruction of the basal ganglia neural circuit by human striatal neurons in hypoxicâischaemic injured brain
+[2025-05-20 13:28:42,976] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:42,976] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC9924911&format=json
+[2025-05-20 13:28:46,403] INFO in pmcid_to_pmid: Found PMID 36516880 for PMCID PMC9924911
+[2025-05-20 13:28:46,403] INFO in bioc_fetcher: Requesting PubTator data for PMID 36516880
+[2025-05-20 13:28:47,813] INFO in bioc_fetcher: Figure found: awac358f1.jpg with 27 entities.
+[2025-05-20 13:28:47,813] INFO in bioc_fetcher: Figure found: awac358f2.jpg with 4 entities.
+[2025-05-20 13:28:47,813] INFO in bioc_fetcher: Figure found: awac358f3.jpg with 11 entities.
+[2025-05-20 13:28:47,814] INFO in bioc_fetcher: Figure found: awac358f4.jpg with 5 entities.
+[2025-05-20 13:28:47,814] INFO in bioc_fetcher: Figure found: awac358f5.jpg with 7 entities.
+[2025-05-20 13:28:47,814] INFO in bioc_fetcher: Figure found: awac358f6.jpg with 7 entities.
+[2025-05-20 13:28:47,814] INFO in bioc_fetcher: Figure found: awac358f7.jpg with 2 entities.
+[2025-05-20 13:28:47,814] INFO in bioc_fetcher: Figure found: awac358f8.jpg with 12 entities.
+[2025-05-20 13:28:47,814] INFO in bioc_fetcher: Total figures found: 8
+[2025-05-20 13:28:47,815] INFO in ingest_pipeline: Successfully processed PMC ID: PMC9924911
+[2025-05-20 13:28:47,815] INFO in ingest_pipeline: Processing PMC ID: PMC6516866
+[2025-05-20 13:28:47,815] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC6516866
+[2025-05-20 13:28:49,717] INFO in bioc_fetcher: Title found: Chemistry of MRI Contrast Agents: Current Challenges and New Frontiers
+[2025-05-20 13:28:49,718] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:49,718] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC6516866&format=json
+[2025-05-20 13:28:50,523] INFO in pmcid_to_pmid: Found PMID 30350585 for PMCID PMC6516866
+[2025-05-20 13:28:50,524] INFO in bioc_fetcher: Requesting PubTator data for PMID 30350585
+[2025-05-20 13:28:51,413] INFO in bioc_fetcher: Total figures found: 0
+[2025-05-20 13:28:51,429] INFO in ingest_pipeline: Successfully processed PMC ID: PMC6516866
+[2025-05-20 13:28:51,431] INFO in ingest_pipeline: Processing PMC ID: PMC9251372
+[2025-05-20 13:28:51,431] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC9251372
+[2025-05-20 13:28:52,749] INFO in bioc_fetcher: Title found: The Impact of Pedagogical Agents' Gender on Academic Learning: A Systematic Review
+[2025-05-20 13:28:52,749] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:52,749] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC9251372&format=json
+[2025-05-20 13:28:53,544] INFO in pmcid_to_pmid: Found PMID 35795011 for PMCID PMC9251372
+[2025-05-20 13:28:53,544] INFO in bioc_fetcher: Requesting PubTator data for PMID 35795011
+[2025-05-20 13:28:54,971] INFO in bioc_fetcher: Figure found: frai-05-862997-g0001.jpg with 0 entities.
+[2025-05-20 13:28:54,972] INFO in bioc_fetcher: Total figures found: 1
+[2025-05-20 13:28:54,973] INFO in ingest_pipeline: Successfully processed PMC ID: PMC9251372
+[2025-05-20 13:28:54,973] INFO in ingest_pipeline: Processing PMC ID: PMC9352757
+[2025-05-20 13:28:54,973] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC9352757
+[2025-05-20 13:28:56,147] INFO in bioc_fetcher: Title found: Visualization of micro-agents and surroundings by real-time multicolor fluorescence microscopy
+[2025-05-20 13:28:56,147] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:28:56,147] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC9352757&format=json
+[2025-05-20 13:28:56,983] INFO in pmcid_to_pmid: Found PMID 35927294 for PMCID PMC9352757
+[2025-05-20 13:28:56,983] INFO in bioc_fetcher: Requesting PubTator data for PMID 35927294
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig1_HTML.jpg with 7 entities.
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig2_HTML.jpg with 1 entities.
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig3_HTML.jpg with 2 entities.
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig4_HTML.jpg with 2 entities.
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig5_HTML.jpg with 2 entities.
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig6_HTML.jpg with 3 entities.
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig7_HTML.jpg with 2 entities.
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig8_HTML.jpg with 4 entities.
+[2025-05-20 13:28:58,072] INFO in bioc_fetcher: Total figures found: 8
+[2025-05-20 13:28:58,073] INFO in ingest_pipeline: Successfully processed PMC ID: PMC9352757
+[2025-05-20 13:28:58,073] INFO in ingest_pipeline: Total papers processed: 9
+[2025-05-20 13:28:58,087] INFO in duckdb_writer: DuckDB connected at: ./data/papers.duckdb
+[2025-05-20 13:28:58,394] INFO in duckdb_writer: Inserted paper PMC10190110 with 0 figures.
+[2025-05-20 13:28:58,418] INFO in duckdb_writer: Inserted paper PMC8508466 with 6 figures.
+[2025-05-20 13:28:58,429] INFO in duckdb_writer: Inserted paper PMC10025446 with 3 figures.
+[2025-05-20 13:28:58,451] INFO in duckdb_writer: Inserted paper PMC10543332 with 7 figures.
+[2025-05-20 13:28:58,462] INFO in duckdb_writer: Inserted paper PMC10280951 with 3 figures.
+[2025-05-20 13:28:58,486] INFO in duckdb_writer: Inserted paper PMC9924911 with 8 figures.
+[2025-05-20 13:28:58,489] INFO in duckdb_writer: Inserted paper PMC6516866 with 0 figures.
+[2025-05-20 13:28:58,494] INFO in duckdb_writer: Inserted paper PMC9251372 with 1 figures.
+[2025-05-20 13:28:58,517] INFO in duckdb_writer: Inserted paper PMC9352757 with 8 figures.
+[2025-05-20 13:28:58,517] INFO in batch_ingest: Batch ingestion completed successfully from: ingest/folder
+[2025-05-20 13:29:21,368] INFO in duckdb_writer: DuckDB connected at: ./data/papers.duckdb
+[2025-05-20 13:29:21,369] INFO in duckdb_writer: Exporting to CSV in export/csv
+[2025-05-20 13:29:21,680] INFO in duckdb_writer: CSV export completed.
+[2025-05-20 13:29:21,681] INFO in export: CSV export completed to folder: export/csv
+[2025-05-20 13:29:27,922] INFO in duckdb_writer: DuckDB connected at: ./data/papers.duckdb
+[2025-05-20 13:29:27,923] INFO in duckdb_writer: Exporting to JSON in export/json
+[2025-05-20 13:29:28,229] INFO in duckdb_writer: JSON export completed.
+[2025-05-20 13:29:28,230] INFO in export: JSON export completed to folder: export/json
+[2025-05-20 13:31:19,259] INFO in ingest: Reading IDs from folder: ingest/folder
+[2025-05-20 13:31:19,259] INFO in batch_ingest: Loaded 2 IDs from ingest/folder/ids.txt
+[2025-05-20 13:31:19,259] INFO in batch_ingest: Loaded 1 IDs from ingest/folder/ids2.txt
+[2025-05-20 13:31:19,260] INFO in batch_ingest: Loaded 3 IDs from ingest/folder/ids.csv
+[2025-05-20 13:31:19,260] INFO in batch_ingest: Loaded 4 IDs from ingest/folder/ids.json
+[2025-05-20 13:31:19,260] INFO in batch_ingest: Total PMC IDs collected: 10
+[2025-05-20 13:31:19,260] INFO in ingest_pipeline: Processing PMC ID: PMC10190110
+[2025-05-20 13:31:19,260] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC10190110
+[2025-05-20 13:31:20,892] INFO in bioc_fetcher: Title found: Advances in human intracranial electroencephalography research, guidelines and good practices
+[2025-05-20 13:31:20,892] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:20,892] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC10190110&format=json
+[2025-05-20 13:31:21,713] INFO in pmcid_to_pmid: Found PMID 35792291 for PMCID PMC10190110
+[2025-05-20 13:31:21,713] INFO in bioc_fetcher: Requesting PubTator data for PMID 35792291
+[2025-05-20 13:31:22,530] INFO in bioc_fetcher: Total figures found: 0
+[2025-05-20 13:31:22,532] INFO in ingest_pipeline: Successfully processed PMC ID: PMC10190110
+[2025-05-20 13:31:22,533] INFO in ingest_pipeline: Processing PMC ID: PMC8508466
+[2025-05-20 13:31:22,533] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC8508466
+[2025-05-20 13:31:23,731] INFO in bioc_fetcher: Title found: BOLD Coupling between Lesioned and Healthy Brain Is Associated with Glioma Patientsâ Recovery
+[2025-05-20 13:31:23,731] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:23,731] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC8508466&format=json
+[2025-05-20 13:31:24,557] INFO in pmcid_to_pmid: Found PMID 34638493 for PMCID PMC8508466
+[2025-05-20 13:31:24,557] INFO in bioc_fetcher: Requesting PubTator data for PMID 34638493
+[2025-05-20 13:31:25,887] INFO in bioc_fetcher: Figure found: cancers-13-05008-g001.jpg with 2 entities.
+[2025-05-20 13:31:25,887] INFO in bioc_fetcher: Figure found: cancers-13-05008-g002.jpg with 8 entities.
+[2025-05-20 13:31:25,887] INFO in bioc_fetcher: Figure found: cancers-13-05008-g003.jpg with 12 entities.
+[2025-05-20 13:31:25,887] INFO in bioc_fetcher: Figure found: cancers-13-05008-g004.jpg with 12 entities.
+[2025-05-20 13:31:25,887] INFO in bioc_fetcher: Figure found: cancers-13-05008-g005.jpg with 12 entities.
+[2025-05-20 13:31:25,887] INFO in bioc_fetcher: Figure found: cancers-13-05008-g006.jpg with 6 entities.
+[2025-05-20 13:31:25,887] INFO in bioc_fetcher: Total figures found: 6
+[2025-05-20 13:31:25,888] INFO in ingest_pipeline: Successfully processed PMC ID: PMC8508466
+[2025-05-20 13:31:25,889] INFO in ingest_pipeline: Processing PMC ID: PMC9580861
+[2025-05-20 13:31:25,889] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC9580861
+[2025-05-20 13:31:27,022] INFO in bioc_fetcher: Title found: Uncertainty Visualization: Concepts, Methods, and Applications in Biological Data Visualization
+[2025-05-20 13:31:27,023] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:27,023] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC9580861&format=json
+[2025-05-20 13:31:27,857] INFO in pmcid_to_pmid: Found PMID 36304261 for PMCID PMC9580861
+[2025-05-20 13:31:27,857] INFO in bioc_fetcher: Requesting PubTator data for PMID 36304261
+[2025-05-20 13:31:28,972] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g001.jpg with 0 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g002.jpg with 0 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g003.jpg with 0 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g004.jpg with 0 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g005.jpg with 2 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g006.jpg with 1 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g007.jpg with 1 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g008.jpg with 0 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g009.jpg with 0 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g010.jpg with 2 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Figure found: fbinf-02-793819-g011.jpg with 0 entities.
+[2025-05-20 13:31:28,973] INFO in bioc_fetcher: Total figures found: 11
+[2025-05-20 13:31:28,974] INFO in ingest_pipeline: Successfully processed PMC ID: PMC9580861
+[2025-05-20 13:31:28,974] INFO in ingest_pipeline: Processing PMC ID: PMC10025446
+[2025-05-20 13:31:28,975] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC10025446
+[2025-05-20 13:31:30,074] INFO in bioc_fetcher: Title found: A review on longitudinal data analysis with random forest
+[2025-05-20 13:31:30,075] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:30,075] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC10025446&format=json
+[2025-05-20 13:31:30,884] INFO in pmcid_to_pmid: Found PMID 36653905 for PMCID PMC10025446
+[2025-05-20 13:31:30,885] INFO in bioc_fetcher: Requesting PubTator data for PMID 36653905
+[2025-05-20 13:31:31,951] INFO in bioc_fetcher: Figure found: bbad002f1.jpg with 0 entities.
+[2025-05-20 13:31:31,951] INFO in bioc_fetcher: Figure found: bbad002f2.jpg with 0 entities.
+[2025-05-20 13:31:31,952] INFO in bioc_fetcher: Figure found: bbad002f3.jpg with 0 entities.
+[2025-05-20 13:31:31,952] INFO in bioc_fetcher: Total figures found: 3
+[2025-05-20 13:31:31,953] INFO in ingest_pipeline: Successfully processed PMC ID: PMC10025446
+[2025-05-20 13:31:31,953] INFO in ingest_pipeline: Processing PMC ID: PMC10543332
+[2025-05-20 13:31:31,953] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC10543332
+[2025-05-20 13:31:33,049] INFO in bioc_fetcher: Title found: Development and testing of a random forest-based machine learning model for predicting events among breast cancer patients with a poor response to neoadjuvant chemotherapy
+[2025-05-20 13:31:33,049] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:33,049] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC10543332&format=json
+[2025-05-20 13:31:33,864] INFO in pmcid_to_pmid: Found PMID 37777809 for PMCID PMC10543332
+[2025-05-20 13:31:33,864] INFO in bioc_fetcher: Requesting PubTator data for PMID 37777809
+[2025-05-20 13:31:34,935] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig1_HTML.jpg with 0 entities.
+[2025-05-20 13:31:34,935] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig2_HTML.jpg with 0 entities.
+[2025-05-20 13:31:34,935] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig3_HTML.jpg with 0 entities.
+[2025-05-20 13:31:34,935] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig4_HTML.jpg with 0 entities.
+[2025-05-20 13:31:34,935] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig5_HTML.jpg with 0 entities.
+[2025-05-20 13:31:34,935] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig6_HTML.jpg with 0 entities.
+[2025-05-20 13:31:34,935] INFO in bioc_fetcher: Figure found: 40001_2023_1361_Fig7_HTML.jpg with 0 entities.
+[2025-05-20 13:31:34,935] INFO in bioc_fetcher: Total figures found: 7
+[2025-05-20 13:31:34,936] INFO in ingest_pipeline: Successfully processed PMC ID: PMC10543332
+[2025-05-20 13:31:34,936] INFO in ingest_pipeline: Processing PMC ID: PMC10280951
+[2025-05-20 13:31:34,936] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC10280951
+[2025-05-20 13:31:36,127] INFO in bioc_fetcher: Title found: Use and misuse of random forest variable importance metrics in medicine: demonstrations through incident stroke prediction
+[2025-05-20 13:31:36,127] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:36,127] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC10280951&format=json
+[2025-05-20 13:31:36,958] INFO in pmcid_to_pmid: Found PMID 37337173 for PMCID PMC10280951
+[2025-05-20 13:31:36,958] INFO in bioc_fetcher: Requesting PubTator data for PMID 37337173
+[2025-05-20 13:31:38,038] INFO in bioc_fetcher: Figure found: 12874_2023_1965_Fig1_HTML.jpg with 2 entities.
+[2025-05-20 13:31:38,039] INFO in bioc_fetcher: Figure found: 12874_2023_1965_Fig2_HTML.jpg with 1 entities.
+[2025-05-20 13:31:38,039] INFO in bioc_fetcher: Figure found: 12874_2023_1965_Fig3_HTML.jpg with 1 entities.
+[2025-05-20 13:31:38,039] INFO in bioc_fetcher: Total figures found: 3
+[2025-05-20 13:31:38,040] INFO in ingest_pipeline: Successfully processed PMC ID: PMC10280951
+[2025-05-20 13:31:38,040] INFO in ingest_pipeline: Processing PMC ID: PMC9924911
+[2025-05-20 13:31:38,040] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC9924911
+[2025-05-20 13:31:39,205] INFO in bioc_fetcher: Title found: Functional reconstruction of the basal ganglia neural circuit by human striatal neurons in hypoxicâischaemic injured brain
+[2025-05-20 13:31:39,205] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:39,205] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC9924911&format=json
+[2025-05-20 13:31:40,033] INFO in pmcid_to_pmid: Found PMID 36516880 for PMCID PMC9924911
+[2025-05-20 13:31:40,034] INFO in bioc_fetcher: Requesting PubTator data for PMID 36516880
+[2025-05-20 13:31:41,327] INFO in bioc_fetcher: Figure found: awac358f1.jpg with 27 entities.
+[2025-05-20 13:31:41,327] INFO in bioc_fetcher: Figure found: awac358f2.jpg with 4 entities.
+[2025-05-20 13:31:41,327] INFO in bioc_fetcher: Figure found: awac358f3.jpg with 11 entities.
+[2025-05-20 13:31:41,327] INFO in bioc_fetcher: Figure found: awac358f4.jpg with 5 entities.
+[2025-05-20 13:31:41,328] INFO in bioc_fetcher: Figure found: awac358f5.jpg with 7 entities.
+[2025-05-20 13:31:41,328] INFO in bioc_fetcher: Figure found: awac358f6.jpg with 7 entities.
+[2025-05-20 13:31:41,328] INFO in bioc_fetcher: Figure found: awac358f7.jpg with 2 entities.
+[2025-05-20 13:31:41,328] INFO in bioc_fetcher: Figure found: awac358f8.jpg with 12 entities.
+[2025-05-20 13:31:41,328] INFO in bioc_fetcher: Total figures found: 8
+[2025-05-20 13:31:41,329] INFO in ingest_pipeline: Successfully processed PMC ID: PMC9924911
+[2025-05-20 13:31:41,329] INFO in ingest_pipeline: Processing PMC ID: PMC6516866
+[2025-05-20 13:31:41,329] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC6516866
+[2025-05-20 13:31:43,194] INFO in bioc_fetcher: Title found: Chemistry of MRI Contrast Agents: Current Challenges and New Frontiers
+[2025-05-20 13:31:43,194] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:43,194] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC6516866&format=json
+[2025-05-20 13:31:44,001] INFO in pmcid_to_pmid: Found PMID 30350585 for PMCID PMC6516866
+[2025-05-20 13:31:44,002] INFO in bioc_fetcher: Requesting PubTator data for PMID 30350585
+[2025-05-20 13:31:44,821] INFO in bioc_fetcher: Total figures found: 0
+[2025-05-20 13:31:44,825] INFO in ingest_pipeline: Successfully processed PMC ID: PMC6516866
+[2025-05-20 13:31:44,825] INFO in ingest_pipeline: Processing PMC ID: PMC9251372
+[2025-05-20 13:31:44,825] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC9251372
+[2025-05-20 13:31:46,151] INFO in bioc_fetcher: Title found: The Impact of Pedagogical Agents' Gender on Academic Learning: A Systematic Review
+[2025-05-20 13:31:46,151] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:46,151] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC9251372&format=json
+[2025-05-20 13:31:46,991] INFO in pmcid_to_pmid: Found PMID 35795011 for PMCID PMC9251372
+[2025-05-20 13:31:46,991] INFO in bioc_fetcher: Requesting PubTator data for PMID 35795011
+[2025-05-20 13:31:48,320] INFO in bioc_fetcher: Figure found: frai-05-862997-g0001.jpg with 0 entities.
+[2025-05-20 13:31:48,321] INFO in bioc_fetcher: Total figures found: 1
+[2025-05-20 13:31:48,322] INFO in ingest_pipeline: Successfully processed PMC ID: PMC9251372
+[2025-05-20 13:31:48,322] INFO in ingest_pipeline: Processing PMC ID: PMC9352757
+[2025-05-20 13:31:48,322] INFO in bioc_fetcher: Requesting BioC PMC data for PMC PMC9352757
+[2025-05-20 13:31:49,418] INFO in bioc_fetcher: Title found: Visualization of micro-agents and surroundings by real-time multicolor fluorescence microscopy
+[2025-05-20 13:31:49,418] INFO in bioc_fetcher: Abstract found
+[2025-05-20 13:31:49,418] INFO in pmcid_to_pmid: Converting PMCID to PMID using: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=PubPaperCopilot&email=example@example.com&ids=PMC9352757&format=json
+[2025-05-20 13:31:50,222] INFO in pmcid_to_pmid: Found PMID 35927294 for PMCID PMC9352757
+[2025-05-20 13:31:50,223] INFO in bioc_fetcher: Requesting PubTator data for PMID 35927294
+[2025-05-20 13:31:51,291] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig1_HTML.jpg with 7 entities.
+[2025-05-20 13:31:51,291] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig2_HTML.jpg with 1 entities.
+[2025-05-20 13:31:51,291] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig3_HTML.jpg with 2 entities.
+[2025-05-20 13:31:51,292] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig4_HTML.jpg with 2 entities.
+[2025-05-20 13:31:51,292] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig5_HTML.jpg with 2 entities.
+[2025-05-20 13:31:51,292] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig6_HTML.jpg with 3 entities.
+[2025-05-20 13:31:51,292] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig7_HTML.jpg with 2 entities.
+[2025-05-20 13:31:51,292] INFO in bioc_fetcher: Figure found: 41598_2022_17297_Fig8_HTML.jpg with 4 entities.
+[2025-05-20 13:31:51,292] INFO in bioc_fetcher: Total figures found: 8
+[2025-05-20 13:31:51,293] INFO in ingest_pipeline: Successfully processed PMC ID: PMC9352757
+[2025-05-20 13:31:51,294] INFO in ingest_pipeline: Total papers processed: 10
+[2025-05-20 13:31:51,309] INFO in duckdb_writer: DuckDB connected at: ./data/papers.duckdb
+[2025-05-20 13:31:51,616] INFO in duckdb_writer: Paper PMC10190110 already exists, skipping insertion.
+[2025-05-20 13:31:51,617] INFO in duckdb_writer: Paper PMC8508466 already exists, skipping insertion.
+[2025-05-20 13:31:51,657] INFO in duckdb_writer: Inserted paper PMC9580861 with 11 figures.
+[2025-05-20 13:31:51,658] INFO in duckdb_writer: Paper PMC10025446 already exists, skipping insertion.
+[2025-05-20 13:31:51,658] INFO in duckdb_writer: Paper PMC10543332 already exists, skipping insertion.
+[2025-05-20 13:31:51,659] INFO in duckdb_writer: Paper PMC10280951 already exists, skipping insertion.
+[2025-05-20 13:31:51,659] INFO in duckdb_writer: Paper PMC9924911 already exists, skipping insertion.
+[2025-05-20 13:31:51,660] INFO in duckdb_writer: Paper PMC6516866 already exists, skipping insertion.
+[2025-05-20 13:31:51,661] INFO in duckdb_writer: Paper PMC9251372 already exists, skipping insertion.
+[2025-05-20 13:31:51,661] INFO in duckdb_writer: Paper PMC9352757 already exists, skipping insertion.
+[2025-05-20 13:31:51,661] INFO in batch_ingest: Batch ingestion completed successfully from: ingest/folder
+[2025-05-20 13:32:01,033] INFO in duckdb_writer: DuckDB connected at: ./data/papers.duckdb
+[2025-05-20 13:32:01,034] INFO in duckdb_writer: Exporting to CSV in export/csv
+[2025-05-20 13:32:01,340] INFO in duckdb_writer: CSV export completed.
+[2025-05-20 13:32:01,340] INFO in export: CSV export completed to folder: export/csv
+[2025-05-20 13:32:05,712] INFO in duckdb_writer: DuckDB connected at: ./data/papers.duckdb
+[2025-05-20 13:32:05,713] INFO in duckdb_writer: Exporting to JSON in export/json
+[2025-05-20 13:32:06,111] INFO in duckdb_writer: JSON export completed.
+[2025-05-20 13:32:06,111] INFO in export: JSON export completed to folder: export/json
